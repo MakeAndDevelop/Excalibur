@@ -44,16 +44,19 @@ namespace Excalibur.Cross.Language
 
         public string GetText(string entryKey, params object[] args) => _languageBinder.GetText(entryKey, args);
 
+        /// <inheritdoc />
         public IMvxLanguageBinder GetTextResource(string resourceName)
         {
             return new MvxLanguageBinder(_namespaceName, resourceName);
         }
 
+        /// <inheritdoc />
         public string GetTextFromResource(string resourceName, string entryKey)
         {
             return GetTextResource(resourceName).GetText(entryKey);
         }
 
+        /// <inheritdoc />
         public string GetTextFromResource(string resourceName, string entryKey, params object[] args)
         {
             return GetTextResource(resourceName).GetText(entryKey, args);
