@@ -12,12 +12,6 @@ namespace Excalibur.Cross.Language
         private readonly string _namespaceName;
         private readonly IMvxLanguageBinder _languageBinder;
 
-        public SharedTextProvider()
-        {
-            _namespaceName = ExTextProvider.GeneralNamespace;
-            _languageBinder = new MvxLanguageBinder(_namespaceName, ExTextProvider.SharedNamespace);
-        }
-
         /// <summary>
         /// Constructor that should be called when registering an instance of this class with the DI service.
         /// Default shared localized text resources filename is 'Shared'
